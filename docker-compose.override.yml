@@ -1,0 +1,6 @@
+
+version: '3'
+services:
+  navidrome:
+    volumes:
+      - ./YOUR_MUSIC_FOLDER:/music:ro
