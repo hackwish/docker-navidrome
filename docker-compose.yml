@@ -16,7 +16,7 @@ services:
       # Optional: put your config options customization here. Examples:
       ND_SCANSCHEDULE: 1h
       ND_LOGLEVEL: info
-      ND_DEVACTIVITYPANEL: FALSE  # optimización propuesta por https://rlodeiro.info/blog/navidrome/
+      ND_DEVACTIVITYPANEL: false  # optimización propuesta por https://rlodeiro.info/blog/navidrome/
       ND_SESSIONTIMEOUT: 24h
       ND_BASEURL: ""
     volumes:
