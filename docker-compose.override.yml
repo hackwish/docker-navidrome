@@ -4,3 +4,9 @@ services:
   navidrome:
     volumes:
       - ./YOUR_MUSIC_FOLDER:/music:ro
+  asknavidrome:
+    environment:
+      NAVI_SKILL_ID: NAVI_SKILL_ID
+      NAVI_URL: https://NAVI_URL
+      NAVI_USER: NAVI_USER
+      NAVI_PASS: NAVI_PASS

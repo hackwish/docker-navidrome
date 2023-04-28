@@ -6,7 +6,7 @@ services:
     ports:
       - 4533:4533
     dns:
-      - 8.8.8.8
+      - 9.9.9.9
       - 1.1.1.1
     restart: unless-stopped
     environment:
@@ -22,7 +22,22 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./data:/data
+  asknavidrome:
+    image: ghcr.io/rosskouk/asknavidrome:latest
+    user: 1000:1000 # should be owner of volumes
+    ports:
+      - 5000:5000
+    dns:
+      - 9.9.9.9
+      - 1.1.1.1
+    restart: unless-stopped
+    environment:
 
+      NAVI_SONG_COUNT: 50
+      NAVI_PORT: 443
+      NAVI_API_PATH: /rest
+      NAVI_API_VER: 1.16.1
+      NAVI_DEBUG: 0
 volumes:
   data:
   music:
